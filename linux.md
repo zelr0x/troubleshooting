@@ -8,7 +8,7 @@ However, Chromium can't be run as root because it runs in its own sandbox. The f
 The proper solution is to create a separate user for Chromium - `chromiumUser` for the sake of example:
 1. `useradd -G sudo chromiumUser`
 2. `passwrd chromiumUser`
-3. input your secure password (different from root password obviously) and confirm it
+3. input your secure password (different from root password obviously) and confirm it. You can forget this password right away since root is not asked for credentials of any other user.
 
 After that Chromium can be run with `sudo -u chromiumUser`. I ran it and got this:
 ```
@@ -28,4 +28,4 @@ fi
 ```
 
 To run chromium from dock favorites, prepend chromium binary location in `exec` parameter of `chromium.desktop` file with `sudo -u chromiumUser`. In my installation, the file is `/usr/share/applications/chromium.desktop` and the line looks like this:
-`Exec=sudo -u zelr0x /usr/bin/chromium %U`
+`Exec=sudo -u chromiumUser /usr/bin/chromium %U`
