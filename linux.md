@@ -7,7 +7,7 @@ However, Chromium can't be run as root because it runs in its own sandbox. The f
 #### Step 1
 The proper solution is to create a separate user for Chromium - `chromiumUser` for the sake of example:
 1. `useradd -G sudo chromiumUser`
-2. `passwrd chromiumUser`
+2. `passwd chromiumUser`
 3. input your secure password (different from root password obviously) and confirm it. You can forget this password right away since root is not asked for credentials of any other user.
 
 After that Chromium can be run with `sudo -u chromiumUser`. I ran it and got this:
