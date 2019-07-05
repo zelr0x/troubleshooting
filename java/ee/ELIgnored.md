@@ -36,7 +36,7 @@ Why it is bad?
 BTW, why you're here, add `trimDirectiveWhitespaces="true"`parameter of the same directive to remove unnecessary whitespace from resulting HTML.
 
 ### Correct:
-Change Servlet version in deployment descriptor to 3.0 (max version supported by tomcat 7).
+Change Servlet version in the deployment descriptor to 3.0 (max version supported by tomcat 7).
 ```xml
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xmlns="http://java.sun.com/xml/ns/javaee"
